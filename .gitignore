@@ -6,7 +6,7 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
-chatter-gpt.xcodeproj/
+*/project.xcworkspace/*
 
 ## User settings
 xcuserdata/
