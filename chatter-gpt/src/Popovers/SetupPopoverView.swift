@@ -13,9 +13,8 @@ struct SetupPopoverView: View {
     
     var body: some View {
         let speechRecognitionStatus = Permissions.checkSpeechRecognitionPermissions()
-        
         VStack(alignment: .leading, spacing: 10) {
-            if(Permissions.checkMicrophonePermissions() != .authorized) {
+            if(!Permissions.checkMicrophonePermissions()) {
                 Button(action: {
                     let url = Permissions.getMicrophonePrivacySettingsLink()
                     NSWorkspace.shared.open(url)

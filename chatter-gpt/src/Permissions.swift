@@ -30,23 +30,23 @@ class Permissions {
     
     // MARK: - Microphone
     
-    static func checkMicrophonePermissions() -> AVAuthorizationStatus {
-        return AVCaptureDevice.authorizationStatus(for: AVMediaType.audio)
-//        let audioEngine = AVAudioEngine()
-//        let inputNode = audioEngine.inputNode
-//        let recordingFormat = inputNode.outputFormat(forBus: 0)
-//        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, time in
-//            // do nothing
-//        }
-//        audioEngine.prepare()
-//        do {
-//            try audioEngine.start()
-//            inputNode.removeTap(onBus: 0)
-//            return true
-//        } catch {
-//            print("Microphone permission not granted.")
-//            return false
-//        }
+    static func checkMicrophonePermissions() -> Bool/*AVAuthorizationStatus*/ {
+//        return AVCaptureDevice.authorizationStatus(for: AVMediaType.audio)
+        let audioEngine = AVAudioEngine()
+        let inputNode = audioEngine.inputNode
+        let recordingFormat = inputNode.outputFormat(forBus: 0)
+        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, time in
+            // do nothing
+        }
+        audioEngine.prepare()
+        do {
+            try audioEngine.start()
+            inputNode.removeTap(onBus: 0)
+            return true
+        } catch {
+            print("Microphone permission not granted.")
+            return false
+        }
     }
     
     static func requestMicrophonePermissions() -> Bool {

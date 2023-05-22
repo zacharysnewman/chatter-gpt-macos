@@ -3,7 +3,7 @@ import Foundation
 import AVFoundation
 
 class AppSettings {
-    static let canListen: () -> Bool = { return Permissions.checkMicrophonePermissions() == .authorized && Permissions.checkSpeechRecognitionPermissions() == .authorized && UserDefaults.standard.string(forKey: "apiKey") ?? "" != "" && UserDefaults.standard.string(forKey: "aiName") ?? "" != "" && !isSpeaking && !isListening
+    static let canListen: () -> Bool = { return Permissions.checkMicrophonePermissions() && Permissions.checkSpeechRecognitionPermissions() == .authorized && UserDefaults.standard.string(forKey: "apiKey") ?? "" != "" && UserDefaults.standard.string(forKey: "aiName") ?? "" != "" && !isSpeaking && !isListening
     }
 
     static let voice = AVSpeechSynthesisVoice(language: "en-UK")
