@@ -89,7 +89,7 @@ class SpeechRecognizer {
 
     private func resetTimer() {
         invalidateTimer()
-        timer = Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false) { [weak self] timer in
+        timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [weak self] timer in
             self?.stopRecognizing()
         }
     }
