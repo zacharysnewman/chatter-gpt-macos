@@ -72,7 +72,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         AppDelegate.statusBarItem?.menu?.addItem(stopListeningMenuItem)
         AppDelegate.statusBarItem?.menu?.addItem(stopTalkingMenuItem)
         AppDelegate.statusBarItem?.menu?.addItem(setupMenuItem)
-        AppDelegate.statusBarItem?.menu?.addItem(pluginsMenuItem)
+//        AppDelegate.statusBarItem?.menu?.addItem(pluginsMenuItem)
         AppDelegate.statusBarItem?.menu?.addItem(quitMenuItem)
         
         stopListeningMenuItem.isHidden = true
@@ -178,6 +178,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         print("Processed: \(processedTranscription)")
         print(AppSettings.AIName)
         if(transcription.lowercased().contains(AppSettings.AIName.lowercased())) {
+            TextToSpeech.speak(text: "Let me see", startedSpeakingCallback: {}, stoppedSpeakingCallback: {})
             print("Sending request")
             let parameters: [String: Any] = [
                 "model": "gpt-3.5-turbo",

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		881EDE6829B82B6E0065FFFF /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881EDE6729B82B6E0065FFFF /* SpeechRecognizer.swift */; };
 		88214EA2298C3E3F00548B21 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88214EA1298C3E3F00548B21 /* AppSettings.swift */; };
+		882174AF2A1D80DF00CCFDD5 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882174AE2A1D80DF00CCFDD5 /* SoundPlayer.swift */; };
 		8827047C29B2E0740048566E /* AudioStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827047B29B2E0740048566E /* AudioStreamer.swift */; };
 		8835FEFD29DC8D6400E2F4C7 /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8835FEFC29DC8D6400E2F4C7 /* Permissions.swift */; };
 		8835FEFF29DC937100E2F4C7 /* ErrorPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8835FEFE29DC937100E2F4C7 /* ErrorPopoverView.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		881EDE6729B82B6E0065FFFF /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		88214EA1298C3E3F00548B21 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		882174AE2A1D80DF00CCFDD5 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		8827047B29B2E0740048566E /* AudioStreamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStreamer.swift; sourceTree = "<group>"; };
 		8835FEFC29DC8D6400E2F4C7 /* Permissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permissions.swift; sourceTree = "<group>"; };
 		8835FEFE29DC937100E2F4C7 /* ErrorPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPopoverView.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				88F2631629C1342300F60E73 /* TextProcessing.swift */,
 				882174AD2A1AD78A00CCFDD5 /* Popovers */,
 				8835FEFC29DC8D6400E2F4C7 /* Permissions.swift */,
+				882174AE2A1D80DF00CCFDD5 /* SoundPlayer.swift */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				881EDE6829B82B6E0065FFFF /* SpeechRecognizer.swift in Sources */,
+				882174AF2A1D80DF00CCFDD5 /* SoundPlayer.swift in Sources */,
 				88F2631729C1342300F60E73 /* TextProcessing.swift in Sources */,
 				888343A0296225B4001C34CD /* ContentView.swift in Sources */,
 				88BB191229CF69230033DAC2 /* SpeechSynthesizerWithCallback.swift in Sources */,
@@ -359,7 +363,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0.1;
 				DEVELOPMENT_ASSET_PATHS = "\"chatter-gpt/Preview Content\"";
 				DEVELOPMENT_TEAM = 7NU7A9F4EP;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -373,7 +377,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dropkick.chatter-gpt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -391,7 +395,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0.1;
 				DEVELOPMENT_ASSET_PATHS = "\"chatter-gpt/Preview Content\"";
 				DEVELOPMENT_TEAM = 7NU7A9F4EP;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -405,7 +409,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dropkick.chatter-gpt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
